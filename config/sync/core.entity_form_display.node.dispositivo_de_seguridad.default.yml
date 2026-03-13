@@ -1,0 +1,71 @@
+uuid: e3e06c02-1f02-4eea-9cd9-bd52df1f12bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dispositivo_de_seguridad.field_assigned_client
+    - field.field.node.dispositivo_de_seguridad.field_categoria
+    - node.type.dispositivo_de_seguridad
+  module:
+    - path
+id: node.dispositivo_de_seguridad.default
+targetEntityType: node
+bundle: dispositivo_de_seguridad
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_assigned_client:
+    type: entity_reference_autocomplete
+    weight: 122
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_categoria:
+    type: options_select
+    weight: 121
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

@@ -1,0 +1,25 @@
+# --- Drupal Core & Dependencies ---
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# --- Site Specifics ---
+/web/sites/*/files/
+/web/sites/*/settings.local.php
+/web/sites/*/settings.ddev.php
+/web/sites/*/services.local.yml
+
+# --- DDEV & Environment ---
+.ddev/db-build/
+.ddev/.importdb*
+.ddev/commands/host/
+.ddev/homeadditions/
+*.log
+
+# --- OS & IDE ---
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,28 @@
+uuid: f095fc67-e667-4a6d-ae10-8b3d741e55cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cliente.field_contract_number
+    - node.type.cliente
+  module:
+    - user
+id: node.cliente.default
+targetEntityType: node
+bundle: cliente
+mode: default
+content:
+  field_contract_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

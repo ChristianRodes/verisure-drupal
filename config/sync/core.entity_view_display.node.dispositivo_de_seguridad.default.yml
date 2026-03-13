@@ -1,0 +1,37 @@
+uuid: 0275eabd-1521-49f9-bdd5-adb96cb88356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dispositivo_de_seguridad.field_assigned_client
+    - field.field.node.dispositivo_de_seguridad.field_categoria
+    - node.type.dispositivo_de_seguridad
+  module:
+    - options
+    - user
+id: node.dispositivo_de_seguridad.default
+targetEntityType: node
+bundle: dispositivo_de_seguridad
+mode: default
+content:
+  field_assigned_client:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_categoria:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

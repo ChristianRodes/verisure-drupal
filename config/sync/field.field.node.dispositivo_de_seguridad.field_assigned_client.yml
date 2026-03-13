@@ -1,0 +1,29 @@
+uuid: 5376d430-15bc-4315-b5ac-963d8a304cab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assigned_client
+    - node.type.cliente
+    - node.type.dispositivo_de_seguridad
+id: node.dispositivo_de_seguridad.field_assigned_client
+field_name: field_assigned_client
+entity_type: node
+bundle: dispositivo_de_seguridad
+label: 'Assigned Client'
+description: 'Selecciona al dueño de este dispositivo.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      cliente: cliente
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

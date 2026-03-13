@@ -1,0 +1,19 @@
+uuid: ca008a51-cf00-4b70-9c40-fa1a20b7efa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_assigned_client
+field_name: field_assigned_client
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
