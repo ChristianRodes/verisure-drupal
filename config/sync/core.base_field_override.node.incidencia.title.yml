@@ -1,0 +1,18 @@
+uuid: 61ea65e7-5d5f-4f9f-91b0-2e7a39589b32
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.incidencia
+id: node.incidencia.title
+field_name: title
+entity_type: node
+bundle: incidencia
+label: 'Referencia Incidencia'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

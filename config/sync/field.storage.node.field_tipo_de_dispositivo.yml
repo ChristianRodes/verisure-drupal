@@ -1,0 +1,36 @@
+uuid: 4f1d706d-241d-43fb-9594-d78810505692
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_de_dispositivo
+field_name: field_tipo_de_dispositivo
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: alarma_panel_de_alarma_central|Alarma
+      label: 'Panel de Alarma Central'
+    -
+      value: camara_int_camara_de_video_interior|Camara_Int
+      label: 'Cámara de Vídeo Interior'
+    -
+      value: camara_ext_camara_de_video_exterior|Camara_Ext
+      label: 'Cámara de Vídeo Exterior'
+    -
+      value: sensor_mov_sensor_de_movimiento|Sensor_Mov
+      label: 'Sensor de Movimiento'
+    -
+      value: sensor_puerta_detector_de_apertura_puerta_ventana|Sensor_Puerta
+      label: 'Detector de Apertura (Puerta/Ventana)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

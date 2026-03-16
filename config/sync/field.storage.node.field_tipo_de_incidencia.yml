@@ -1,0 +1,36 @@
+uuid: d841c8cb-ccd4-4cf3-a767-98fd406c4ddd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_de_incidencia
+field_name: field_tipo_de_incidencia
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: robo_confirmado_robo|robo_confirmado
+      label: 'Robo / Intrusión Confirmada'
+    -
+      value: falsa_alarma_falsa|sabotaje
+      label: 'Intento de Sabotaje / Inhibición'
+    -
+      value: falsa_usuario_salto_por_error_del_usuario|falsa_usuario
+      label: 'Salto por Error del Usuario'
+    -
+      value: falsa_tecnica_fallo_tecnico_sensor_defectuoso|falsa_tecnica
+      label: 'Fallo Técnico / Sensor Defectuoso'
+    -
+      value: coaccion_codigo_de_coaccion_panico|coaccion
+      label: 'Código de Coacción / Pánico'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

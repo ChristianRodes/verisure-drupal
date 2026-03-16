@@ -1,0 +1,29 @@
+uuid: c73c545d-b67f-4f1a-b7c4-70eae9cca2fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cliente_asociado
+    - node.type.cliente
+    - node.type.dispositivo
+id: node.dispositivo.field_cliente_asociado
+field_name: field_cliente_asociado
+entity_type: node
+bundle: dispositivo
+label: 'Cliente Asociado'
+description: 'Empieza a escribir el nombre del cliente para vincular este dispositivo'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      cliente: cliente
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

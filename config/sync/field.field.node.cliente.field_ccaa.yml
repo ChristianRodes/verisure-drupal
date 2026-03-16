@@ -1,0 +1,21 @@
+uuid: e2cc5393-4a25-431d-af3e-4702e4466375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ccaa
+    - node.type.cliente
+  module:
+    - options
+id: node.cliente.field_ccaa
+field_name: field_ccaa
+entity_type: node
+bundle: cliente
+label: CCAA
+description: 'Selecciona la Comunidad Autónoma'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,16 +1,18 @@
-uuid: e3e06c02-1f02-4eea-9cd9-bd52df1f12bc
+uuid: 5729674e-0521-4b00-80b1-8473b88b2c72
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.dispositivo_de_seguridad.field_assigned_client
-    - field.field.node.dispositivo_de_seguridad.field_categoria
-    - node.type.dispositivo_de_seguridad
+    - field.field.node.dispositivo.field_cliente_asociado
+    - field.field.node.dispositivo.field_historial_revisiones
+    - field.field.node.dispositivo.field_tipo_de_dispositivo
+    - node.type.dispositivo
   module:
+    - datetime
     - path
-id: node.dispositivo_de_seguridad.default
+id: node.dispositivo.default
 targetEntityType: node
-bundle: dispositivo_de_seguridad
+bundle: dispositivo
 mode: default
 content:
   created:
@@ -19,9 +21,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_assigned_client:
+  field_cliente_asociado:
     type: entity_reference_autocomplete
-    weight: 122
+    weight: 121
     region: content
     settings:
       match_operator: CONTAINS
@@ -29,9 +31,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_categoria:
+  field_historial_revisiones:
+    type: datetime_default
+    weight: 123
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tipo_de_dispositivo:
     type: options_select
-    weight: 121
+    weight: 122
     region: content
     settings: {  }
     third_party_settings: {  }

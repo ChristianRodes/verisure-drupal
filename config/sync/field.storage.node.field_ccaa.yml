@@ -1,0 +1,78 @@
+uuid: a122a2a0-5cba-42bf-a2c6-f2fb8a19c897
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_ccaa
+field_name: field_ccaa
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: andalucia_andalucia|Andalucia
+      label: Andalucía
+    -
+      value: aragon_aragon|Aragon
+      label: Aragón
+    -
+      value: asturias_principado_de_asturias|Asturias
+      label: 'Principado de Asturias'
+    -
+      value: baleares_islas_baleares|Baleares
+      label: 'Islas Baleares'
+    -
+      value: canarias_canarias|Canarias
+      label: Canarias
+    -
+      value: cantabria_cantabria|Cantabria
+      label: Cantabria
+    -
+      value: 'castilla_la_mancha_castilla_la_mancha|Castilla-La Mancha'
+      label: 'Castilla-La Mancha'
+    -
+      value: 'castilla_y_leon_castilla_y_leon|Castilla y Leon'
+      label: 'Castilla y León'
+    -
+      value: cataluna_cataluna|Cataluña
+      label: Cataluña
+    -
+      value: extremadura_extremadura|Extremadura
+      label: Extremadura
+    -
+      value: galicia_galicia|Galicia
+      label: Galicia
+    -
+      value: madrid_comunidad_de_madrid|Madrid
+      label: 'Comunidad de Madrid'
+    -
+      value: murcia_region_de_murcia|Murcia
+      label: 'Región de Murcia'
+    -
+      value: navarra_comunidad_foral_de_navarra|Navarra
+      label: 'Comunidad Foral de Navarra'
+    -
+      value: 'pais_vasco_pais_vasco|Pais Vasco'
+      label: 'País Vasco'
+    -
+      value: 'la_rioja_la_rioja|La Rioja'
+      label: 'La Rioja'
+    -
+      value: valencia_comunidad_valenciana|Valencia
+      label: 'Comunidad Valenciana'
+    -
+      value: ceuta_ceuta|Ceuta
+      label: Ceuta
+    -
+      value: melilla_melilla|Melilla
+      label: Melilla
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

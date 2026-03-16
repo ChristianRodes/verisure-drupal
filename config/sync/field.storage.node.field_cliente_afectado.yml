@@ -1,0 +1,19 @@
+uuid: 524e80fd-90fa-42e8-b40b-752f1755ce73
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_cliente_afectado
+field_name: field_cliente_afectado
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

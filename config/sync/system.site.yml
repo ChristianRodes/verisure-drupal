@@ -1,14 +1,14 @@
 _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
-uuid: 5cca63cc-f823-4f08-aed6-ae17396f7982
-name: 'Verisure Asset Manager'
+uuid: e5b2a710-dad6-46f0-91ce-8fe746b30b6d
+name: 'Control de Incidencias'
 mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/22
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

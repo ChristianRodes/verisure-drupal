@@ -1,0 +1,57 @@
+uuid: 632c0af0-27ec-4da8-88d5-cf100be30543
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.incidencia.field_cliente_afectado
+    - field.field.node.incidencia.field_fecha_incidencia
+    - field.field.node.incidencia.field_id_incidencia
+    - field.field.node.incidencia.field_tipo_de_incidencia
+    - node.type.incidencia
+  module:
+    - datetime
+    - options
+    - user
+id: node.incidencia.default
+targetEntityType: node
+bundle: incidencia
+mode: default
+content:
+  field_cliente_afectado:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_fecha_incidencia:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_id_incidencia:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_tipo_de_incidencia:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

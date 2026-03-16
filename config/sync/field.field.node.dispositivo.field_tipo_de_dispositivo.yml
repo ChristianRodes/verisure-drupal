@@ -1,0 +1,21 @@
+uuid: 28176c2f-cb96-4d63-a9d9-af4e561cc00b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_dispositivo
+    - node.type.dispositivo
+  module:
+    - options
+id: node.dispositivo.field_tipo_de_dispositivo
+field_name: field_tipo_de_dispositivo
+entity_type: node
+bundle: dispositivo
+label: 'Tipo de Dispositivo'
+description: 'Selecciona la categoría técnica del hardware'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

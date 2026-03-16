@@ -1,11 +1,13 @@
-uuid: dff15434-0f05-4dbc-90c4-925717a3b1c8
+uuid: 4c04577d-83ef-4f6b-ac3d-c1803816ca7b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.cliente.field_contract_number
+    - field.field.node.cliente.field_ccaa
+    - field.field.node.cliente.field_fecha_de_alta
     - node.type.cliente
   module:
+    - datetime
     - path
 id: node.cliente.default
 targetEntityType: node
@@ -18,13 +20,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_contract_number:
-    type: string_textfield
+  field_ccaa:
+    type: options_select
     weight: 121
     region: content
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
+    third_party_settings: {  }
+  field_fecha_de_alta:
+    type: datetime_default
+    weight: 122
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path

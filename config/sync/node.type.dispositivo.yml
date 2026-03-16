@@ -1,4 +1,4 @@
-uuid: 970c31fb-92be-415f-a1a4-7b8231fc89ba
+uuid: 61f89349-ab81-425f-9923-00e15f78228a
 langcode: en
 status: true
 dependencies:
@@ -9,9 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Dispositivo de Seguridad'
-type: dispositivo_de_seguridad
-description: 'Ficha técnica de dispositivos instalados'
+name: Dispositivo
+type: dispositivo
+description: 'Hardware de seguridad (Alarma, Cámara, Sensor) vinculado a un cliente.'
 help: null
 new_revision: true
 preview_mode: 1

@@ -1,0 +1,19 @@
+uuid: 1ad33e91-2f4a-4618-b9be-0410e6c4ecb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_id_incidencia
+    - node.type.incidencia
+id: node.incidencia.field_id_incidencia
+field_name: field_id_incidencia
+entity_type: node
+bundle: incidencia
+label: 'id incidencia'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

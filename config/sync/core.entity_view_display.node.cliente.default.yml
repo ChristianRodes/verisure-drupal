@@ -1,24 +1,35 @@
-uuid: f095fc67-e667-4a6d-ae10-8b3d741e55cc
+uuid: 308aa49a-4c43-4b35-863f-85b91eea87cd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.cliente.field_contract_number
+    - field.field.node.cliente.field_ccaa
+    - field.field.node.cliente.field_fecha_de_alta
     - node.type.cliente
   module:
+    - datetime
+    - options
     - user
 id: node.cliente.default
 targetEntityType: node
 bundle: cliente
 mode: default
 content:
-  field_contract_number:
-    type: string
+  field_ccaa:
+    type: list_default
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_fecha_de_alta:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

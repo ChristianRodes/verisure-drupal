@@ -1,4 +1,4 @@
-uuid: cfc8e63f-9cdb-4160-88a1-58ad1c5316c8
+uuid: 125644d2-b4c6-46f7-9971-1b8e1a7eb196
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Cliente
 type: cliente
-description: 'Entidad para gestionar a clientes suscritos a Verisure'
+description: 'Entidad para gestionar los datos de los clientes'
 help: null
 new_revision: true
 preview_mode: 1

@@ -1,0 +1,21 @@
+uuid: 23d73511-417e-4a55-8e12-e18769c70eeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_incidencia
+    - node.type.incidencia
+  module:
+    - options
+id: node.incidencia.field_tipo_de_incidencia
+field_name: field_tipo_de_incidencia
+entity_type: node
+bundle: incidencia
+label: 'Tipo de Incidencia'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

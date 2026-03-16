@@ -1,0 +1,48 @@
+uuid: b140defc-49f2-4748-a867-e44d9ccebe82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dispositivo.field_cliente_asociado
+    - field.field.node.dispositivo.field_historial_revisiones
+    - field.field.node.dispositivo.field_tipo_de_dispositivo
+    - node.type.dispositivo
+  module:
+    - datetime
+    - options
+    - user
+id: node.dispositivo.default
+targetEntityType: node
+bundle: dispositivo
+mode: default
+content:
+  field_cliente_asociado:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_historial_revisiones:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_tipo_de_dispositivo:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

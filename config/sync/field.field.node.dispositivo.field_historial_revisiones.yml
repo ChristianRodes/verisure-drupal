@@ -1,0 +1,24 @@
+uuid: bffdaae3-8d9f-450e-b5f2-5352eb30d3b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_historial_revisiones
+    - node.type.dispositivo
+  module:
+    - datetime
+id: node.dispositivo.field_historial_revisiones
+field_name: field_historial_revisiones
+entity_type: node
+bundle: dispositivo
+label: 'Historial Revisiones'
+description: 'Registra cada intervención técnica realizada sobre este dispositivo"'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime
