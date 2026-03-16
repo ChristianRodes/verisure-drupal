@@ -1,43 +1,72 @@
-Prueba Técnica: Dashboard Operativo Verisure en Drupal
-Este repositorio contiene la configuración y personalización de un panel de control operativo para la gestión de incidencias y mantenimiento preventivo, desarrollado sobre Drupal 11.
+# 🛡️ Mini Proyecto Drupal: Dashboard Verisure
 
-Arquitectura y Entorno
-El proyecto se ha estructurado utilizando un flujo de trabajo moderno basado en contenedores:
+Este repositorio contiene la configuración y personalización de un panel de control operativo para la gestión de incidencias y mantenimiento preventivo, desarrollado sobre **Drupal 11**.
 
-Motor: Docker Desktop.
+---
 
-Orquestación: DDEV para la gestión del entorno local.
+## 🏗️ Arquitectura y Entorno
 
-Core: Instalación de Drupal 11.
+El proyecto se ha estructurado utilizando un flujo de trabajo basado en contenedores para asegurar la portabilidad:
 
-Interfaz de Administración
-Para mejorar la usabilidad del panel de gestión, se han implementado los siguientes cambios:
+* **Motor:** `Docker Desktop`
+* **Orquestación:** `DDEV` para la gestión del entorno local.
+* **Core:** Instalación limpia de `Drupal 11.3`.
 
-Gin Admin Theme: Instalación y configuración de Gin para proporcionar una interfaz de administración moderna y clara.
+---
 
-Gin Toolbar: Configuración de la barra de herramientas para optimizar la navegación interna.
+## 🎨 Interfaz de Administración
 
-Desarrollo del Dashboard (UI/UX)
-El objetivo ha sido crear una landing page funcional en /inicio que sirva como Centro de Operaciones (NOC):
+He descargado e implementado los siguientes componentes:
 
-KPIs Corporativos: Implementación de tarjetas de indicadores clave (Incidencias, distribución por CCAA y revisiones) utilizando HTML y CSS.
+* **Gin Admin Theme:** Instalación y configuración de la capa de administración para proporcionar una interfaz limpia.
+* **Gin Toolbar:** Optimización de la barra de herramientas para facilitar la navegación durante la configuración.
 
-Visualización de Datos: Creación de una barra de distribución segmentada para representar el reparto geográfico de forma intuitiva.
+---
 
-Optimización de Filtros: Desacoplamiento de los filtros de las Vistas para situarlos en una región superior, mejorando la interacción del usuario.
+## 📊 Dashboard de Operaciones (UI/UX)
 
-Lógica de Negocio y Estructura
-Modelado de Datos: Creación de tipos de contenido y relaciones entre Clientes e Incidencias.
+El objetivo central ha sido crear una landing page funcional en `/landing` que actúe como un **NOC (Network Operations Center)**:
 
-Vistas Dinámicas: Configuración de filtros por Comunidad Autónoma y tipología.
+* **KPIs Corporativos:** Tarjetas de indicadores clave con diseño personalizado (Incidencias, distribución por CCAA y revisiones).
+* **Visualización de Datos:** Implementación de una barra de distribución segmentada para representar el reparto geográfico de alertas.
+* **Optimización de Filtros:** Desacoplamiento de filtros expuestos situándolos en una región inferior para mejorar la jerarquía visual.
 
-Mantenimiento Preventivo: Identificación automática de dispositivos que requieren revisión técnica (antigüedad > 1 año).
+---
 
-🛠️ Notas sobre el desarrollo y mejoras pendientes
-En esta versión actual, las tarjetas de métricas superiores (KPIs) están implementadas mediante HTML estático para definir la línea visual del proyecto. Para que estos datos fueran 100% dinámicos en una fase posterior, el planteamiento sería:
+## 🧠 Lógica de Negocio y Estructura
 
-Automatización de métricas: Sustituiría los números actuales por bloques de "Agregación" de Drupal. Esto permitiría que el sistema cuente automáticamente las incidencias reales de la base de datos y actualice el número sin intervención manual.
+He utilizado la interfaz de administración para estructurar y organizar el contenido, gestionando de forma integral los tipos de datos, bloques y vistas necesarios para el proyecto.
 
-Cálculo de porcentajes: Para que la barra de distribución geográfica cambie sola, integraría un pequeño script o usaría un módulo de gráficos que lea directamente las categorías de las incidencias creadas.
+1.  **Modelado de Datos:** Tipos de contenido para Clientes e Incidencias con relaciones mediante *Entity Reference*.
+2.  **Vistas Dinámicas:** Filtros avanzados por Comunidad Autónoma y tipología de incidencia.
+3.  **Mantenimiento Preventivo:** Lógica en Vistas para identificar automáticamente dispositivos que requieren revisión (antigüedad > 1 año).
 
-Conexión en tiempo real: Vincularía el contador de "Revisiones pendientes" con la vista de filtrado inferior, de modo que si se soluciona una revisión, el número del KPI baje automáticamente.
+---
+
+## 🛠️ Notas de Desarrollo y Mejoras Pendientes
+
+Actualmente, las tarjetas de métricas superiores (KPIs) están implementadas mediante HTML/CSS estático para definir la propuesta visual. En una fase productiva, el planteamiento para dinamizarlas sería:
+
+* **Automatización de métricas:** Uso de la función de **Agregación** en las Vistas de Drupal para contar incidencias en tiempo real.
+* **Cálculo dinámico:** Integración de módulos de gráficos (o scripts ligeros) para que la barra de CCAA responda automáticamente a la base de datos.
+* **Sincronización:** Vinculación directa entre el contador de revisiones y el estado de los nodos para una actualización instantánea.
+
+---
+
+## 🚀 Instalación
+
+Para replicar este entorno localmente, sigue estos pasos:
+
+1.  **Clonar** el repositorio.
+2.  Iniciar el entorno:
+    ```bash
+    ddev start
+    ```
+3.  Importar configuración:
+    ```bash
+    ddev drush cim -y
+    ```
+4.  Acceder al sitio:
+    ```bash
+    ddev launch
+    ```
