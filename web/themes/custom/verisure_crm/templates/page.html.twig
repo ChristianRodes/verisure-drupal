@@ -1,0 +1,72 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - node: The node object, if there is an associated node for this page.
+ * - page: A set of variables for the rendered page content.
+ * - url: The url of the current page.
+ * - logged_in: A flag indicating if user is logged in.
+ * - is_admin: A flag indicating if user is an administrator.
+ *
+ * @see template_preprocess_page()
+ */
+#}
+
+<div class="layout-page">
+  {% if page.header %}
+    <header class="header">
+      <div class="header-wrapper">
+        {{ page.header }}
+      </div>
+    </header>
+  {% endif %}
+
+  {% if page.help %}
+    <div class="help">
+      {{ page.help }}
+    </div>
+  {% endif %}
+
+  <div class="main-container">
+    {% if page.breadcrumbs %}
+      <nav class="breadcrumbs">
+        {{ page.breadcrumbs }}
+      </nav>
+    {% endif %}
+
+    {% if page.page_title %}
+      <div class="page-title">
+        {{ page.page_title }}
+      </div>
+    {% endif %}
+
+    <main id="main-content" class="content-area">
+      {% if page.content_top %}
+        <div class="content-top">
+          {{ page.content_top }}
+        </div>
+      {% endif %}
+
+      {{ page.content }}
+
+      {% if page.content_bottom %}
+        <div class="content-bottom">
+          {{ page.content_bottom }}
+        </div>
+      {% endif %}
+    </main>
+  </div>
+
+  {% if page.footer %}
+    <footer class="footer">
+      <div class="footer-wrapper">
+        {{ page.footer }}
+      </div>
+      <div class="footer-bottom">
+        &copy; {{ "now"|date("Y") }} Verisure CRM | Powered by Drupal
+      </div>
+    </footer>
+  {% endif %}
+</div>

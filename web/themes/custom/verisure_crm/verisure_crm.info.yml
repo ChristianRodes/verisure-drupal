@@ -1,0 +1,27 @@
+name: Verisure CRM
+description: 'Tema personalizado para el MVP CRM de Verisure, basado en Olivero.'
+type: theme
+base theme: olivero
+core: '11'
+core_version_requirement: '^11'
+version: '1.0.0'
+
+libraries:
+  - verisure_crm/global-styling
+
+regions:
+  header: Header
+  primary_menu: Primary Menu
+  secondary_menu: Secondary Menu
+  breadcrumbs: Breadcrumbs
+  help: Help
+  content: Content
+  sidebar_first: Sidebar First
+  sidebar_second: Sidebar Second
+  footer: Footer
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_third: Footer Third
+  footer_fourth: Footer Fourth
+
+screenshot: screenshot.png

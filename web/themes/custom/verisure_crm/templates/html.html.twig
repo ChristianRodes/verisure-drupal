@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - is_admin: A flag indicating if user is an administrator.
+ * - html_attributes: HTML attributes for the html tag.
+ * - head_title: List of text elements that make up the head_title variable.
+ * - head_title_array: (Optional) A keyed array of head title parts.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   the 'page' variable is printed, as arguments for html() function in html5
+ *   starter kit.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: Tokens to generate attributes will be replaced after
+ *   initial email is sent. Defaults to an empty string and will not affect
+ *   template output if database is online.
+ *
+ * @see template_preprocess_html()
+ *
+ * @ingroup themeable
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="Verisure CRM" />
+    <head-closing-tag>
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
