@@ -70,3 +70,9 @@ Para replicar este entorno localmente, sigue estos pasos:
     ```bash
     ddev launch
     ```
+
+5.  Acceder al panel de administración con acceso directo sin contraseña.
+    ```bash
+    ddev drush uli
+    ```
+
